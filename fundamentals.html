@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals of Good Arguments | Argumentative Essay Learning App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            max-width: 800px;
+            margin: auto;
+        }
+        header, footer {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        .example, .exercise {
+            background-color: #e9e9e9;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #feedback {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fundamentals of Good Arguments</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#components">Components</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#exercise">Exercise</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>What makes an argument truly compelling? In this module, we'll explore the fundamental components of strong arguments, drawing insights from Bo Seo's book "Good Arguments". By the end, you'll be able to identify and construct arguments that are clear, logical, and persuasive.</p>
+        </section>
+
+        <section id="components">
+            <h2>Components of a Good Argument</h2>
+            <h3>1. Claim</h3>
+            <p>A claim is the main point or thesis of your argument. It's what you're trying to prove or persuade others to believe.</p>
+            
+            <h3>2. Evidence</h3>
+            <p>Evidence is the factual information that supports your claim. This can include data, statistics, expert opinions, or real-world examples.</p>
+            
+            <h3>3. Reasoning</h3>
+            <p>Reasoning is how you connect your evidence to your claim. It explains why the evidence supports your position.</p>
+            
+            <h3>4. Link</h3>
+            <p>The link is how your argument connects to the larger context or why it matters. It answers the "so what?" question.</p>
+        </section>
+
+        <section id="examples">
+            <h2>Examples from "Good Arguments"</h2>
+            <div class="example">
+                <h3>Example 1: Climate Change</h3>
+                <p><strong>Claim:</strong> Immediate action on climate change is necessary.</p>
+                <p><strong>Evidence:</strong> Global temperatures have risen by 1.1°C since the pre-industrial era.</p>
+                <p><strong>Reasoning:</strong> This temperature increase is causing more frequent and severe weather events, rising sea levels, and ecosystem disruptions.</p>
+                <p><strong>Link:</strong> If we don't act now, these changes will lead to irreversible damage to our planet and way of life.</p>
+            </div>
+        </section>
+
+        <section id="exercise">
+            <h2>Interactive Exercise</h2>
+            <div class="exercise">
+                <p>Analyze the following argument:</p>
+                <blockquote>
+                    "We should implement a four-day work week. Studies have shown that it increases productivity and employee satisfaction. This could lead to happier, more efficient workplaces and improve work-life balance for millions."
+                </blockquote>
+                <p>Identify the claim, evidence, reasoning, and link in this argument. Enter your answers in the fields below:</p>
+                
+                <label for="claim">Claim:</label>
+                <input type="text" id="claim" placeholder="Enter the claim here">
+                
+                <label for="evidence">Evidence:</label>
+                <input type="text" id="evidence" placeholder="Enter the evidence here">
+                
+                <label for="reasoning">Reasoning:</label>
+                <input type="text" id="reasoning" placeholder="Enter the reasoning here">
+                
+                <label for="link">Link:</label>
+                <input type="text" id="link" placeholder="Enter the link here">
+                
+                <button onclick="checkAnswers()">Submit Answers</button>
+                
+                <div id="feedback"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Argumentative Essay Learning App. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                claim: document.getElementById('claim').value.toLowerCase(),
+                evidence: document.getElementById('evidence').value.toLowerCase(),
+                reasoning: document.getElementById('reasoning').value.toLowerCase(),
+                link: document.getElementById('link').value.toLowerCase()
+            };
+
+            const expectedAnswers = {
+                claim: "we should implement a four-day work week",
+                evidence: "studies have shown that it increases productivity and employee satisfaction",
+                reasoning: "this could lead to happier, more efficient workplaces",
+                link: "improve work-life balance for millions"
+            };
+
+            let feedback = "";
+            let score = 0;
+
+            for (let key in expectedAnswers) {
+                if (answers[key].includes(expectedAnswers[key])) {
+                    feedback += `<p>✅ Your ${key} is correct!</p>`;
+                    score++;
+                } else {
+                    feedback += `<p>❌ Your ${key} needs improvement. The expected answer was: "${expectedAnswers[key]}"</p>`;
+                }
+            }
+
+            feedback += `<p>Your score: ${score}/4</p>`;
+            if (score === 4) {
+                feedback += "<p>Excellent job! You've correctly identified all components of the argument.</p>";
+            } else {
+                feedback += "<p>Keep practicing! Review the components you missed and try again.</p>";
+            }
+
+            document.getElementById('feedback').innerHTML = feedback;
+        }
+    </script>
+</body>
+</html>
