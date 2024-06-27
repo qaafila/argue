@@ -23,6 +23,9 @@
     <main>
         <section id="introduction">
             <h2>Introduction</h2>
+            <div class="image-container">
+                <img src="images/argumentation-basics.jpg" alt="Visual representation of argumentation basics" />
+            </div>
             <p>What makes an argument truly compelling? In this module, we'll explore the fundamental components of strong arguments, drawing insights from Bo Seo's book "Good Arguments". By the end, you'll be able to identify and construct arguments that are clear, logical, and persuasive.</p>
         </section>
 
@@ -69,6 +72,9 @@
 
         <section id="examples">
             <h2>Examples from "Good Arguments"</h2>
+            <div class="image-container">
+                <img src="images/good-arguments-book.jpg" alt="Cover of 'Good Arguments' book by Bo Seo" />
+            </div>
             <div class="example">
                 <h3>Example: Climate Change</h3>
                 <p><strong>Claim:</strong> Immediate action on climate change is necessary.</p>
@@ -111,17 +117,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggleButtons = document.querySelectorAll('.toggle-example');
-            toggleButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const example = this.nextElementSibling;
-                    example.classList.toggle('hidden');
-                    this.textContent = example.classList.contains('hidden') ? 'Show Example' : 'Hide Example';
-                });
-            });
-        });
-    </script>
 </body>
 </html>
