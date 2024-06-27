@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals of Good Arguments | Argumentative Essay Learning App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fundamentals of Good Arguments</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fundamentals.html">Fundamentals</a></li>
+                <li><a href="common-errors.html">Common Errors</a></li>
+                <li><a href="essay-structure.html">Essay Structure</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>What makes an argument truly compelling? In this module, we'll explore the fundamental components of strong arguments, drawing insights from Bo Seo's book "Good Arguments". By the end, you'll be able to identify and construct arguments that are clear, logical, and persuasive.</p>
+        </section>
+
+        <section id="components">
+            <h2>Components of a Good Argument</h2>
+            <div class="interactive-components">
+                <div class="component">
+                    <h3>1. Claim</h3>
+                    <p>A claim is the main point or thesis of your argument. It's what you're trying to prove or persuade others to believe.</p>
+                    <button class="toggle-example" data-component="claim">Show Example</button>
+                    <div class="example hidden">
+                        <strong>Example:</strong> "Remote work should be a standard option for all office jobs."
+                    </div>
+                </div>
+                
+                <div class="component">
+                    <h3>2. Evidence</h3>
+                    <p>Evidence is the factual information that supports your claim. This can include data, statistics, expert opinions, or real-world examples.</p>
+                    <button class="toggle-example" data-component="evidence">Show Example</button>
+                    <div class="example hidden">
+                        <strong>Example:</strong> "A Stanford study found that remote workers were 13% more productive than their office-based counterparts."
+                    </div>
+                </div>
+                
+                <div class="component">
+                    <h3>3. Reasoning</h3>
+                    <p>Reasoning is how you connect your evidence to your claim. It explains why the evidence supports your position.</p>
+                    <button class="toggle-example" data-component="reasoning">Show Example</button>
+                    <div class="example hidden">
+                        <strong>Example:</strong> "This increased productivity demonstrates that remote work can be as effective, if not more so, than traditional office work."
+                    </div>
+                </div>
+                
+                <div class="component">
+                    <h3>4. Link</h3>
+                    <p>The link is how your argument connects to the larger context or why it matters. It answers the "so what?" question.</p>
+                    <button class="toggle-example" data-component="link">Show Example</button>
+                    <div class="example hidden">
+                        <strong>Example:</strong> "By offering remote work options, companies can boost productivity, reduce overhead costs, and improve employee satisfaction, leading to a more efficient and competitive business landscape."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples">
+            <h2>Examples from "Good Arguments"</h2>
+            <div class="example">
+                <h3>Example: Climate Change</h3>
+                <p><strong>Claim:</strong> Immediate action on climate change is necessary.</p>
+                <p><strong>Evidence:</strong> Global temperatures have risen by 1.1°C since the pre-industrial era.</p>
+                <p><strong>Reasoning:</strong> This temperature increase is causing more frequent and severe weather events, rising sea levels, and ecosystem disruptions.</p>
+                <p><strong>Link:</strong> If we don't act now, these changes will lead to irreversible damage to our planet and way of life.</p>
+            </div>
+        </section>
+
+        <section id="exercise">
+            <h2>Interactive Exercise</h2>
+            <div class="exercise">
+                <p>Analyze the following argument:</p>
+                <blockquote>
+                    "We should implement a four-day work week. Studies have shown that it increases productivity and employee satisfaction. This could lead to happier, more efficient workplaces and improve work-life balance for millions."
+                </blockquote>
+                <p>Identify the claim, evidence, reasoning, and link in this argument. Enter your answers in the fields below:</p>
+                
+                <label for="claim">Claim:</label>
+                <input type="text" id="claim" placeholder="Enter the claim here">
+                
+                <label for="evidence">Evidence:</label>
+                <input type="text" id="evidence" placeholder="Enter the evidence here">
+                
+                <label for="reasoning">Reasoning:</label>
+                <input type="text" id="reasoning" placeholder="Enter the reasoning here">
+                
+                <label for="link">Link:</label>
+                <input type="text" id="link" placeholder="Enter the link here">
+                
+                <button onclick="checkAnswers()">Submit Answers</button>
+                
+                <div id="feedback"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Argumentative Essay Learning App. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButtons = document.querySelectorAll('.toggle-example');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const example = this.nextElementSibling;
+                    example.classList.toggle('hidden');
+                    this.textContent = example.classList.contains('hidden') ? 'Show Example' : 'Hide Example';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
