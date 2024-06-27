@@ -9,10 +9,10 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     color: var(--text-color);
     background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -20,12 +20,9 @@ header {
     color: white;
     text-align: center;
     padding: 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+    background-image: url('/images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 nav {
@@ -57,14 +54,12 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 2rem;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    padding: 2rem;
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 5px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
 }
 
 h1, h2, h3 {
@@ -94,60 +89,16 @@ button:hover {
     background-color: var(--secondary-color);
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0 20px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: var(--secondary-color);
-    color: white;
+.image-container {
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin: 2rem 0;
 }
 
-.quiz-container {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-#feedback, #results {
-    margin-top: 20px;
-    font-weight: bold;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.correct {
-    color: #28a745;
-    background-color: #d4edda;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.incorrect {
-    color: #dc3545;
-    background-color: #f8d7da;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* Add some animation */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-main {
-    animation: fadeIn 1s ease-in;
-}
+/* Add more styles as needed */
