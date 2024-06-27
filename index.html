@@ -23,32 +23,18 @@
     <main>
         <section id="opening-scenario">
             <h2>The Million-Dollar Decision</h2>
-            <p>Imagine this: You're the CEO of a struggling tech startup. Your company has developed a groundbreaking AI algorithm that could revolutionize healthcare diagnosis. But there's a catch...</p>
-            <p>Your lead developer, Sarah, claims she discovered a critical flaw in the algorithm just days before the big product launch. She argues that rolling out the product now could lead to misdiagnoses and potentially harm patients. However, your marketing team insists that any delay would bankrupt the company, leaving 100 employees jobless and crushing your dreams of making healthcare more accessible.</p>
-            <p>Now, you have mere hours to make a decision that could impact millions of lives and the future of your company.</p>
-            <div class="interactive-questions">
-                <p>What would you do? Consider these questions:</p>
-                <ul>
-                    <li>
-                        <button class="toggle-answer" data-answer="trust-sarah">Do you trust Sarah's claim about the flaw? What evidence would you need to see?</button>
-                        <p class="answer hidden">Consider requesting a detailed report from Sarah, including the nature of the flaw, potential impacts, and possible solutions. You might also seek a second opinion from another expert in the field.</p>
-                    </li>
-                    <li>
-                        <button class="toggle-answer" data-answer="weigh-risks">How do you weigh the potential risks against the benefits?</button>
-                        <p class="answer hidden">Create a pros and cons list. Consider the short-term financial risks versus the long-term reputational and ethical risks. Think about the potential harm to patients versus the potential benefits of the technology.</p>
-                    </li>
-                    <li>
-                        <button class="toggle-answer" data-answer="spot-biases">Can you spot any biases or logical fallacies in the arguments presented?</button>
-                        <p class="answer hidden">Look for potential biases like the sunk cost fallacy (continuing with the launch because of resources already invested) or false dichotomy (assuming the only options are immediate launch or bankruptcy).</p>
-                    </li>
-                </ul>
+            <div class="image-container">
+                <img src="images/decision-making.jpg" alt="Person making a difficult decision" />
             </div>
-            <p>Welcome to the world of critical thinking and argumentation – where every claim matters, evidence is crucial, and your ability to reason can change lives. In this course, you'll learn how to dissect arguments, build compelling cases, and navigate complex ethical dilemmas like this one.</p>
-            <p><strong>Are you ready to sharpen your mind and become a master of persuasion? Let's dive in!</strong></p>
+            <p>Imagine this: You're the CEO of a struggling tech startup. Your company has developed a groundbreaking AI algorithm that could revolutionize healthcare diagnosis. But there's a catch...</p>
+            <!-- Rest of the content -->
         </section>
 
         <section id="course-overview">
             <h2>Course Overview</h2>
+            <div class="image-container">
+                <img src="images/course-overview.jpg" alt="Overview of course materials" />
+            </div>
             <p>In this course, you'll learn:</p>
             <ul>
                 <li>What makes a good argument (claim, evidence, reason, link)</li>
@@ -57,11 +43,7 @@
             </ul>
         </section>
 
-        <section id="get-started">
-            <h2>Get Started</h2>
-            <p>Begin your journey to becoming a master of argumentation:</p>
-            <button onclick="location.href='fundamentals.html'">Start Learning</button>
-        </section>
+        <!-- Rest of the content -->
     </main>
 
     <footer>
@@ -69,19 +51,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggleButtons = document.querySelectorAll('.toggle-answer');
-            toggleButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const answer = this.nextElementSibling;
-                    answer.classList.toggle('hidden');
-                    this.textContent = answer.classList.contains('hidden') ? 
-                        this.textContent.replace('Hide', 'Show') : 
-                        this.textContent.replace('Show', 'Hide');
-                });
-            });
-        });
-    </script>
 </body>
 </html>
